@@ -14,13 +14,13 @@ from src.logger import logging
 from src.utils import save_object
 
 
-class data_transformation_config:
+class DataTransformationConfig:
     preprocesseor_obj_file_path = os.path.join('artifacts',"preprocessor.pkl")
 
 
 class DataTransformation:
     def __init__(self):
-        self.data_transformation_config = data_transformation_config()
+        self.data_transformation_config = DataTransformationConfig()
 
     def get_data_transformer_object(self):
         '''
@@ -108,9 +108,4 @@ class DataTransformation:
             )
         except Exception as e:
             raise CustomException(e, sys)
-
-
-
-
-
-
+        
